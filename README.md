@@ -32,7 +32,8 @@ Using a dataset of Twitter posts, this project preprocesses and transforms text 
 - transformers
 
 Make sure to download the glove embeddings:
-https://nlp.stanford.edu/projects/glove/ 
+```https://nlp.stanford.edu/projects/glove/
+```
 Under Download pre-trained word vectors, click on Wikipedia 2014 + Gigaword 5 (6B tokens, 400K vocab, uncased): glove.6B.zip
 
 
