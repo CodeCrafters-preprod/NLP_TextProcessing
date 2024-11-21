@@ -4,6 +4,7 @@ This project demonstrates text processing techniques applied to Twitter data for
 
 ## Table of Contents
 - [Project Overview](#project-overview)
+- [Dependencies](#dependencies)
 - [Data Preprocessing](#data-preprocessing)
   - [Tokenization](#tokenization)
   - [Removing Stopwords](#removing-stopwords)
@@ -15,11 +16,34 @@ This project demonstrates text processing techniques applied to Twitter data for
   - [Word2Vec](#word2vec)
   - [GloVe](#glove)
 - [Model Training and Evaluation](#model-training-and-evaluation)
-- [Dependencies](#dependencies)
+
 
 ## Project Overview
 
 Using a dataset of Twitter posts, this project preprocesses and transforms text data into a format suitable for machine learning. Techniques like tokenization, stopword removal, stemming, lemmatization, and word embedding are used to extract meaningful features from text. Logistic Regression is then employed to classify tweet sentiment.
+
+## Dependencies
+
+- pandas
+- numpy
+- nltk
+- sklearn
+- gensim
+- transformers
+
+Make sure to download the glove embeddings:
+https://nlp.stanford.edu/projects/glove/ 
+Under Download pre-trained word vectors, click on Wikipedia 2014 + Gigaword 5 (6B tokens, 400K vocab, uncased): glove.6B.zip
+
+
+Make sure to download necessary NLTK data files before running the script:
+```python
+nltk.download('stopwords')
+nltk.download('wordnet')
+```
+
+You can download the kaggle Twitter Sentiment Dataset from here: https://www.kaggle.com/datasets/jp797498e/twitter-entity-sentiment-analysis/data
+
 
 ## Data Preprocessing
 
@@ -53,20 +77,6 @@ GloVe (Global Vectors for Word Representation) embeddings are pre-trained vector
 
 A Logistic Regression model is trained on the TF-IDF-transformed data. The model is evaluated based on accuracy, precision, recall, and F1-score metrics, demonstrating its ability to classify tweet sentiment effectively.
 
-## Dependencies
-
-- pandas
-- numpy
-- nltk
-- sklearn
-- gensim
-- transformers (for advanced tokenization)
-
-Make sure to download necessary NLTK data files before running the script:
-```python
-nltk.download('stopwords')
-nltk.download('wordnet')
-```
 
 ## Getting Started
 
@@ -89,4 +99,3 @@ The model achieves an accuracy of 78% on the test set, with individual scores fo
 | **Tanisha Priya**                | Count Vectorization and TF-IDF Vectorization|
 | **Prachi Tavse**                |Word2Vec Embeddings, Word2Vec Sentence Vetorization|
 | **Harshita Jangde**                | Load GloVe Embeddings, Sentence Vectorization, Embedding Application, Model Training and Evaluation|
-
